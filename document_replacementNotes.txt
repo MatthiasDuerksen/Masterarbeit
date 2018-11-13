@@ -1,0 +1,16 @@
+Replacements for written texts:
+
+common digram -> frequent digram
+nonterminal -> nonterminal symbol or nonterminal rule
+knot -> node
+knots -> nodes
+a [a,i,o,e,u]... -> an [a,i,o,e,u]...
+fig. 1 -> Fig. 1
+overlap-free -> non-overlapping
+
+
+may replace:
+
+Thus ... -> Thus, ...
+Then .. -> Then, ...
+In this case ... -> In this case, ...
