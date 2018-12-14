@@ -39,8 +39,8 @@ Nowadays, there is more and more data, some of it is stored in graphs. The graph
 
 This concept~\cite{mattdk} has already been extended in several bachelor theses. There is a recompression for already compressed graphs~\cite{werneke} and also an efficient coding~\cite{georgi}. 
 
-\asd{
-Since there are only two digram types so far and the further work only supports one type, it limits the coding efficiency. Therefore, the aim of this paper is to examine how other digram types can improve compression.}
+
+Since there are only two digram types so far and the further work only supports one type, it limits the coding efficiency. Therefore, the aim of this paper is to examine how other digram types can improve compression.
 
 \section{Fundamentals}
 
@@ -73,18 +73,17 @@ After the search for the most frequent digram, all non-overlapping occurrences a
 
 
 \section{This Thesis}
-\asd{
-The research will investigate which other types of digrams can be created that have a positive effect on compression. One goal is to test whether the compression approach of Maneth~\cite{maneth} can be simulated by this graph compression. Furthermore it shall be analyzed whether digram types, which become edges when replacing the occurrences, are compatible with the other types of digrams and how such digram types can look like.
-}
-\asd{
+
+The research will investigate which other types of digrams can be created that have a positive effect on compression. One goal is to test whether the compression approach of Maneth~\cite{maneth} can be simulated by this graph compression. Furthermore, it shall be analyzed whether digram types, which non-terminals form edges when replacing the occurrences, are compatible with the other types of digrams and how such digram types can look like.
+
 If there is still time for more research and development, these digrams could be integrated into the further work. One of these works is the efficient coding of Georgi~\cite{georgi}, so that the compressed graph can be stored efficiently in memory.
-}\asd{
+
 These compressed graphs and the corresponding grammar rules can be coded on the basis of Georgi's work~\cite{georgi} and thus save the graph in a memory efficient way.
-Furthermore, the works of Frerk~\cite{pfrerk} and Werneke~\cite{werneke} have developed an extension for the recompression of graphs. This method can be used if, for example, two subgraphs were compressed individually and these graphs are compressed together. This method combines the two graphs and checks whether the grammar rules can be chosen more efficiently in the combination of the two graphs than to combine the previous rules. This method can also be used if an existing graph has been modified and thus has new nodes or old nodes have been removed. Thus, it is checked again whether there is now an efficient compression.
+Furthermore, the works of Frerk~\cite{pfrerk} and Werneke~\cite{werneke} have developed an extension for the recompression of graphs. This method can be used if, for example, two subgraphs were compressed individually and these graphs are compressed together. This method combines the two graphs and checks whether the grammar rules can be chosen more efficiently in the combination of the two graphs than to combine the previous rules. This method can also be used if an existing graph has been modified and thus has new nodes or old nodes have been removed.
 Frerk's approach is based on the graph model and Werneke's methods work on memory level, so that Georgi's coding is considered here.
-}\asd{
+
 The work of Georgi~\cite{georgi} and Werneke~\cite{werneke} only supports graph compression, which does not replace adjacency digrams. Thus, the adjacency digrams and the newly defined digram types must be integrated into the work.
-}
+
 
 \pagebreak
 \printbibliography
