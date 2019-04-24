@@ -243,7 +243,20 @@ All other digram types from Maneth can be adopted analogously. First, you should
 
 \pagebreak
 \section{Combine substitutions of different digram types}
-In this section different digram types were presented, but the question arises whether all digram types can be combined. If a digram type is applied to a graph, the graph will be changed to a hyperedge, for example. If now other digram types are to be applied, it must not come to cases by the changed graph that something goes wrong with the further replacements. Thus it is considered here whether all Digram types are compatible with all others.
+In this section different digram types were presented, but the question arises whether all digram types can be combined. If a digram type is applied to a graph, the graph will be changed to a hyper edge, for example. If now other digram types are to be applied, it must not come to cases by the changed graph that something goes wrong with the further replacements. Thus it is considered here whether all Digram types are compatible with all others.
+Some digram types behave analogously to others. When replacing occurrences there are therefore only three different types of resulting objects. 
+
+The first possible result of the substitution is a substitution to nodes. The graph elements will be replaced from the occurrences to a node. The graph structure will not be violated. The external incident edges are connected from the internal nodes of the occurrence to the new nonterminal node. It can be that the equivalence classes of these edges change at the corresponding end. Thus nodes and edges are replaced by a node and the equivalence classes at the adjacent edges change. However, this is no reason why other digram types cannot be used.
+\todo{add all matching digramtypes}
+
+
+Furthermore, there are digram types which occur when replacing edges. Here we distinguish the cases of a hyper edge (with more than 2 ends) and a simple edge (exactly 2 ends).
+
+These result from the substitution of digrams to an edge. The internal edges and nodes contained in the digram occurrence are removed from the graph and a new edge is inserted so that the graph structure is preserved. When inserting the new edge, the edge gets the nonterminal of the digram rule as label. If the edge is a simple edge, it is directed and does not pose a problem for the new replacements.
+
+In the case of a hyper edge substitution, an undirected hyper edge with more than two ends is inserted into the graph. Since not all Digram types can cope with the replacement of hyper edge, this can have a negative performance influence on further replacements, but no logical errors occur with the following replacements, so that for example a lossy compression results. The equivalence classes of the edges also do not lead to any errors in the subsequent compression.
+
+In summary it can be said that each digram type can be used with any other digram type without hesitation, but from the point of view of Performance it may make sense in some cases not to use some digram types or to use them only after other digram types have been applied.
 
 \section{Search for Digram occurrences}
 
